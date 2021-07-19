@@ -36,6 +36,7 @@ navbar {
   width: 250px;
   color: #657b92;
   text-transform: uppercase;
+  font-size: 14px;
 }
 
 .user-information {
@@ -68,6 +69,7 @@ navbar {
 }
 
 .follow-count {
+  font-size: 18px;
   color: #e6f3fc;
 }
 .navigation-links {
