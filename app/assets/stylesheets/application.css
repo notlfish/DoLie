@@ -12,4 +12,41 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 0;
+}
+
+navbar {
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 200px;
+  color: #657b92;
+  text-transform: uppercase;
+}
+
+.user-information {
+  background-color: #1b2a3d;
+}
+
+.navbar-pic-thumbnail {
+  padding: 15px;
+}
+
+.navigation-links {
+  background-color: #213246;
+  list-style: none;
+  margin: 0;
+}
+
+.navigation-links > li {
+
+}

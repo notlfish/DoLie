@@ -1,0 +1,31 @@
+<div class="user-information">
+  <div class="user-name">
+    <img src="<%= user.photo %>" class="navbar-pic-thumbnail">
+    <p class="navbar-name"><%= user.username %></p>
+  </div>
+  <div class="following-info">
+    <div class="following-box">
+      <p>178</p>
+      <p>Following</p>
+    </div>
+    <div class="following-box">
+      <p>875</p>
+      <p>Followers</p>
+    </div>
+  </div>
+</div>
+
+<ul class="navigation-links">
+  <li>
+    <i class="fa fa-home" aria-hidden="true"></i>
+    <%= link_to 'Home', root_path %>
+  </li>
+  <li>
+    <i class="fa fa-user" aria-hidden="true"></i>
+    <%= link_to 'Profile', user %>
+  </li>
+  <li>
+    <i class="fa fa-bed" aria-hidden="true"></i>
+    <%= link_to 'Call it a day!', destroy_user_session_path, method: 'delete' %>
+  </li>
+</ul>
