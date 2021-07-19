@@ -21,8 +21,8 @@ gem 'jbuilder', '~> 2.7'
 # gem 'redis', '~> 4.0'
 # Use devise for authentication
 gem 'devise'
+gem 'font-awesome-rails'
 gem 'rexml'
-gem "font-awesome-rails"
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'

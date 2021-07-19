@@ -23,12 +23,17 @@ p {
   margin: 0;
 }
 
+p,
+body {
+  font-family: Helvetica;
+}
+
 navbar {
   position: fixed;
   left: 0px;
   top: 0px;
   height: 100%;
-  width: 200px;
+  width: 250px;
   color: #657b92;
   text-transform: uppercase;
 }
@@ -37,16 +42,53 @@ navbar {
   background-color: #1b2a3d;
 }
 
-.navbar-pic-thumbnail {
-  padding: 15px;
+.user-name {
+  display: flex;
+  align-items: center;
 }
 
+.user-pic-thumbnail {
+  display: inline-block;
+  padding: 15px;
+  padding-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.following-info {
+  display: flex;
+}
+
+.following-box {
+  padding: 20px 0;
+  border: #16272f 1px solid;
+  text-transform: none;
+  text-align: center;
+  width: 100%;
+}
+
+.follow-count {
+  color: #e6f3fc;
+}
 .navigation-links {
   background-color: #213246;
   list-style: none;
   margin: 0;
+  padding: 0;
+  height: 100%;
 }
 
 .navigation-links > li {
+  font-size: 18px;
+  padding: 20px;
+}
 
+.nav-link {
+  font-size: 14px;
+}
+
+.nav-icon {
+  width: 18px;
+  text-align: center;
+  padding-right: 8px;
 }

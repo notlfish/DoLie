@@ -1,15 +1,15 @@
 <div class="user-information">
   <div class="user-name">
-    <img src="<%= user.photo %>" class="navbar-pic-thumbnail">
-    <p class="navbar-name"><%= user.username %></p>
+    <img src="<%= user.photo %>" class="user-pic-thumbnail">
+    <p class="navbar-username"><%= user.username %></p>
   </div>
   <div class="following-info">
     <div class="following-box">
-      <p>178</p>
+      <p class="follow-count">178</p>
       <p>Following</p>
     </div>
     <div class="following-box">
-      <p>875</p>
+      <p class="follow-count">875</p>
       <p>Followers</p>
     </div>
   </div>
@@ -17,15 +17,16 @@
 
 <ul class="navigation-links">
   <li>
-    <i class="fa fa-home" aria-hidden="true"></i>
-    <%= link_to 'Home', root_path %>
+    <i class="fa fa-home nav-icon" aria-hidden="true"></i>
+    <%= link_to 'Home', root_path, class: 'nav-link' %>
   </li>
   <li>
-    <i class="fa fa-user" aria-hidden="true"></i>
-    <%= link_to 'Profile', user %>
+    <i class="fa fa-user nav-icon" aria-hidden="true"></i>
+    <%= link_to 'Profile', user, class: 'nav-link' %>
   </li>
   <li>
-    <i class="fa fa-bed" aria-hidden="true"></i>
-    <%= link_to 'Call it a day!', destroy_user_session_path, method: 'delete' %>
+    <i class="fa fa-bed nav-icon" aria-hidden="true"></i>
+    <%= link_to 'Call it a day!', destroy_user_session_path,
+     method: 'delete', class: 'nav-link'%>
   </li>
 </ul>
