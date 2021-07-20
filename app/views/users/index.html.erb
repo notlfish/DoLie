@@ -4,6 +4,15 @@
 <nav class="top-navbar">
   <%= render 'layouts/top_navigation_bar', user: current_user  %>
 </nav>
+
 <main>
-  <h1>Under construction</h1>
+  <aside class="who-to-follow">
+    <%= render 'who_to_follow' %>
+  </aside>
+  <div class="tabs-menu">
+    <p class="open-tab">Ratings</p>
+  </div>
+  <section class="ratings">
+    <%= render 'ratings_form', opinion: @opinion %>
+  </section>
 </main>

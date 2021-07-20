@@ -25,6 +25,12 @@ body {
   font-family: Helvetica, sans-serif;
 }
 
+main {
+  margin-left: 250px;
+  margin-right: 275px;
+  padding: 28px;
+}
+
 .left-navbar {
   position: fixed;
   left: 0;

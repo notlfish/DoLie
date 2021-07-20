@@ -1,0 +1,5 @@
+<%= form_with model: opinion, class: "new-rating" do |form| %>
+  <span class="form-label"><%= form.label :text, "Rate a pillow" %></span>
+  <%= form.text_field :text, class: "input-field" %><br>
+  <div><%= form.submit id: "input-button" %></div>
+<%end%>

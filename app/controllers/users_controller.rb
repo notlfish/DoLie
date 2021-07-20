@@ -1,7 +1,9 @@
 class UsersController < ApplicationController
   before_action :authenticate_user!
 
-  def index; end
+  def index
+    @opinion = current_user.opinions.build
+  end
 
   def show; end
 end
