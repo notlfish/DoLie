@@ -19,16 +19,13 @@ a {
   color: inherit;
 }
 
-p {
-  margin: 0;
-}
-
 p,
 body {
+  margin: 0;
   font-family: Helvetica, sans-serif;
 }
 
-nav {
+.left-navbar {
   position: fixed;
   left: 0;
   top: 0;
@@ -99,4 +96,26 @@ nav {
   width: 18px;
   text-align: center;
   padding-right: 8px;
+}
+
+.top-navbar {
+  background-color: #52a7e7;
+  height: 80px;
+  margin-left: 250px;
+}
+
+.navigation-top-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 30px;
+  margin: 0;
+}
+
+.top-navbar-logo {
+  color: white;
+}
+
+.top-navbar-settings {
+  color: #386e9c;
 }

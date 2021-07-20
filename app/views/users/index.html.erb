@@ -1,5 +1,9 @@
-<nav>
-  <%= render 'layouts/navigation_bar', user: current_user, from: 'Home' %>
+<nav class="left-navbar">
+  <%= render 'layouts/left_navigation_bar', user: current_user, from: 'Home' %>
 </nav>
-
-<h1>Under construction</h1>
+<nav class="top-navbar">
+  <%= render 'layouts/top_navigation_bar', user: current_user  %>
+</nav>
+<main>
+  <h1>Under construction</h1>
+</main>
