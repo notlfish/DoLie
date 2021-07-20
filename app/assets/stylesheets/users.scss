@@ -1,3 +1,54 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+main {
+  margin-left: 250px;
+  margin-right: 275px;
+  height: 100%;
+  color: #a8a8a8;
+}
+
+.main-container {
+  background-color: white;
+  border-radius: 5px;
+  padding: 20px;
+  border: 1px solid #e8e8e8;
+  margin-bottom: 25px;
+}
+
+#opinions {
+  padding: 28px;
+}
+
+.tabs-menu {
+  font-size: 12px;
+  height: 65px;
+  width: 100%;
+  border-bottom: 1px solid #a8a8a8;
+}
+
+.open-tab {
+  width: 90px;
+  height: 63px;
+  line-height: 63px;
+  color: #212d3c;
+  font-weight: 600;
+  text-align: center;
+  border-bottom: 2px solid #3d98df;
+}
+
+.new-rating {
+  font-size: 14px;
+}
+
+.form-label {
+  padding-bottom: 10px;
+}
+
+.input-field {
+  font-size: 12px;
+  padding: 5px;
+  border-radius: 2px;
+  border: 1px solid #a8a8a8;
+  width: 100%;
+}

@@ -1,5 +1,7 @@
-<%= form_with model: opinion, class: "new-rating" do |form| %>
-  <span class="form-label"><%= form.label :text, "Rate a pillow" %></span>
-  <%= form.text_field :text, class: "input-field" %><br>
-  <div><%= form.submit id: "input-button" %></div>
+<%= form_with model: opinion, class: "new-rating text-uppercase" do |form| %>
+  <div class="form-label"><%= form.label :text, "Rate a pillow" %></div>
+  <div>
+    <%= form.text_field :text, class: "input-field",
+        placeholder: 'There\'s nothing to lie about' %>
+  </div>
 <%end%>
