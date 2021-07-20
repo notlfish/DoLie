@@ -25,13 +25,13 @@ p {
 
 p,
 body {
-  font-family: Helvetica;
+  font-family: Helvetica, sans-serif;
 }
 
-navbar {
+nav {
   position: fixed;
-  left: 0px;
-  top: 0px;
+  left: 0;
+  top: 0;
   height: 100%;
   width: 250px;
   color: #657b92;
@@ -72,6 +72,7 @@ navbar {
   font-size: 18px;
   color: #e6f3fc;
 }
+
 .navigation-links {
   background-color: #213246;
   list-style: none;
@@ -87,6 +88,11 @@ navbar {
 
 .nav-link {
   font-size: 14px;
+}
+
+.navlink-highlight {
+  background-color: #4b9ad3;
+  color: white;
 }
 
 .nav-icon {
