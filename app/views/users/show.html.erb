@@ -1,10 +1,12 @@
-<nav>
-  <%= render 'layouts/navigation_bar', user: current_user, from: 'Profile' %>
+<nav class="left-navbar text-uppercase">
+  <%= render 'layouts/left_navigation_bar', user: current_user, from: 'Profile' %>
 </nav>
-<nav>
+<nav class="top-navbar text-uppercase">
   <%= render 'layouts/top_navigation_bar', user: current_user,
              class: 'top-navbar' %>
 </nav>
 
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<main>
+  <h1>Users#show</h1>
+  <p>Find me in app/views/users/show.html.erb</p>
+</main>
