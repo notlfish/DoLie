@@ -1,6 +1,7 @@
 <div class="user-information">
   <div class="user-name">
-    <img src="<%= user.photo %>" class="user-pic-thumbnail">
+    <%= user_pic(user, image_class: 'user-pic-thumbnail') %>
+    <!-- ><img src="<%= user.photo %>" class="user-pic-thumbnail">  -->
     <p class="navbar-username"><%= user.username %></p>
   </div>
   <div class="following-info">

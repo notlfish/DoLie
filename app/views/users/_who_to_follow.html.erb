@@ -1,0 +1,9 @@
+<div class="right-aside-section">
+  <div class="right-aside-title">
+    <h3 class="text-uppercase">Who to follow</h3>
+    <p><i class="fa fa-refresh" aria-hidden="true"></i></p>
+  </div>
+
+  <%= render partial: 'right_aside_entry', collection: User.who_to_follow,
+             as: :user %>
+</div>
