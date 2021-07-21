@@ -46,5 +46,11 @@ RSpec.describe User, type: :model do
       followeds = user.followeds.map { |followed| user_number(followed) }
       expect(followeds).to eq(%w[0 1 2 3])
     end
+
+    it 'retrieves all the relevant opinions' do
+      user = User.find_by(username: 'User4')
+      opinions_from = user.relevant_opinions.pluck(:username)
+      expect(opinions_from).to match_array(%w[User0 User1 User2 User3 User4])
+    end
   end
 end

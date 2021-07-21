@@ -25,7 +25,6 @@ class User < ApplicationRecord
 
   def relevant_opinions
     ids = followeds.pluck(:id) << id
-    p ids
     Opinion.joins(:author)
       .select('users.username as username, users.photo as photo, opinions.text')
       .where(author_id: ids).order(created_at: :desc).limit(10)
