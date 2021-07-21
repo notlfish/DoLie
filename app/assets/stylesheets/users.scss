@@ -1,6 +1,8 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+$content-border: 1px solid #e8e8e8;
+
 main {
   margin-left: 250px;
   margin-right: 275px;
@@ -12,7 +14,7 @@ main {
   background-color: white;
   border-radius: 5px;
   padding: 20px;
-  border: 1px solid #e8e8e8;
+  border: $content-border;
   margin-bottom: 25px;
 }
 
@@ -24,7 +26,7 @@ main {
   font-size: 12px;
   height: 65px;
   width: 100%;
-  border-bottom: 1px solid #a8a8a8;
+  border-bottom: $content-border;
 }
 
 .open-tab {
@@ -51,4 +53,72 @@ main {
   border-radius: 2px;
   border: 1px solid #a8a8a8;
   width: 100%;
+}
+
+.right-aside {
+  position: absolute;
+  right: 0;
+  top: 80px;
+  width: 275px;
+  border-left: $content-border;
+  height: 100%;
+}
+
+.right-aside-section {
+  border-bottom: $content-border;
+  padding: 20px;
+}
+
+.right-aside-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: $content-border;
+  font-size: 13px;
+  line-height: 14px;
+  padding-top: 0;
+  padding-bottom: 30px;
+}
+
+.right-aside-entry {
+  display: flex;
+  align-items: center;
+}
+
+.round-thumbnail {
+  display: block;
+  padding-right: 15px;
+  padding-top: 25px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+.user-entry-name {
+  color: #333;
+}
+
+.user-entry-text {
+  font-size: 12px;
+}
+
+.user-link {
+  color: #79b4e2;
+}
+
+.main-rating {
+  display: flex;
+  align-items: center;
+}
+
+.new-ratings-count {
+  color: #79b4e2;
+  font-size: 13px;
+  font-weight: 600;
+  padding-bottom: 15px;
+  border-bottom: $content-border;
+}
+
+.no-left-padding {
+  padding-left: 0 !important;
 }

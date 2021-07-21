@@ -6,7 +6,7 @@
 </nav>
 
 <main>
-  <aside class="who-to-follow">
+  <aside class="who-to-follow right-aside">
     <%= render 'who_to_follow' %>
   </aside>
 
@@ -18,7 +18,14 @@
     <div class="ratings main-container">
       <%= render 'ratings_form', opinion: @opinion %>
     </div>
+
     <div class="new-ratings main-container">
+      <div class="new-ratings-count text-uppercase">
+        <%= @relevant_opinions.count %> new ratings
+      </div>
+      <%= render partial: 'users/main_rating',
+                 collection: @relevant_opinions,
+                 as: :opinion %>
     </div>
   </section>
 </main>
