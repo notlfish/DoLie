@@ -23,10 +23,10 @@ class User < ApplicationRecord
 
   scope :who_to_follow, -> { all.order('id DESC').limit(3) }
 
-  def relevant_opinions
-    ids = followeds.pluck(:id) << id
+  def relevant_opinions(from: :homepage, max: 10)
+    ids = from == :homepage ? followeds.pluck(:id) << id : id
     Opinion.joins(:author)
       .select('users.username as username, users.photo as photo, opinions.text')
-      .where(author_id: ids).order(created_at: :desc).limit(10)
+      .where(author_id: ids).order(created_at: :desc).limit(max)
   end
 end

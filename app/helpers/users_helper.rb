@@ -7,7 +7,7 @@ module UsersHelper
     return if user.followers.empty?
 
     follower = user.followers.first
-    content_tag(:p, class: 'user-entry-text') do
+    content_tag(:p, class: 'small-text') do
       content_tag(:span, 'Followed by ') +
         link_to(follower.username, follower, class: 'user-link').html_safe
     end

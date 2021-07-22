@@ -27,6 +27,8 @@ main {
   height: 65px;
   width: 100%;
   border-bottom: $content-border;
+  display: flex;
+  align-items: center;
 }
 
 .open-tab {
@@ -98,7 +100,7 @@ main {
   color: #333;
 }
 
-.user-entry-text {
+.small-text {
   font-size: 12px;
 }
 
@@ -121,4 +123,46 @@ main {
 
 .no-left-padding {
   padding-left: 0 !important;
+}
+
+.cover-image {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.pic-and-name {
+  padding-top: 25px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.summary-pic {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  margin: auto;
+  padding-bottom: 20px;
+}
+
+.summary-stats {
+  border-top: $content-border;
+  border-bottom: $content-border;
+  display: flex;
+  text-align: center;
+  height: 65px;
+}
+
+.stats-entry {
+  width: 33.3%;
+  margin: auto;
+  padding-top: 17px;
+  padding-bottom: 17px;
+}
+
+.middle-borders {
+  border-right: $content-border !important;
+  border-left: $content-border !important;
 }

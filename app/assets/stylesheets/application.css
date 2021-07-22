@@ -23,6 +23,14 @@ body {
   background-color: #f5f6f8;
 }
 
+.normal-text {
+  color: #a8a8a8;
+}
+
+.black-text {
+  color: black;
+}
+
 p,
 body {
   margin: 0;

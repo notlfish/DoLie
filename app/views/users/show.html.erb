@@ -1,12 +1,28 @@
 <nav class="left-navbar text-uppercase">
-  <%= render 'layouts/left_navigation_bar', user: current_user, from: 'Profile' %>
+  <%= render 'layouts/left_navigation_bar', user: @user, from: 'Profile' %>
 </nav>
 <nav class="top-navbar text-uppercase">
-  <%= render 'layouts/top_navigation_bar', user: current_user,
+  <%= render 'layouts/top_navigation_bar', user: @user,
              class: 'top-navbar' %>
 </nav>
 
 <main>
-  <h1>Users#show</h1>
-  <p>Find me in app/views/users/show.html.erb</p>
+  <aside class="user-summary right-aside">
+    <%= render 'user_summary', user: @user %>
+  </aside>
+  <%= user_cover(@user) %>
+  <div class="tabs-menu text-uppercase">
+    <p class="open-tab">Ratings</p>
+  </div>
+
+  <section id="opinions">
+    <div class="new-ratings main-container">
+      <div class="new-ratings-count text-uppercase">
+        All ratings <span class="normal-text">/ No replies</span>
+      </div>
+      <%= render partial: 'users/main_rating',
+                 collection: @relevant_opinions,
+                 as: :opinion %>
+    </div>
+  </section>
 </main>
