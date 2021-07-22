@@ -10,4 +10,20 @@ module ApplicationHelper
 
     image_tag(image_path('default_cover.jpg'), class: 'cover-image')
   end
+
+  def render_opinion_text(opinion)
+    content_tag(:p) do
+      separate_mentions(opinion.text).reduce('') do |acc, str|
+        next acc + str unless str[0] == '@'
+
+        acc + content_tag(:span, str, class: 'user-link')
+      end.html_safe
+    end.html_safe
+  end
+
+  private
+
+  def separate_mentions(str)
+    str.split(/(\@\w+)/)
+  end
 end
