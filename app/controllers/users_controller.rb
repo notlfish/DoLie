@@ -5,6 +5,7 @@ class UsersController < ApplicationController
     @user = current_user
     @opinion = current_user.opinions.build
     @relevant_opinions = current_user.relevant_opinions
+    @relevant_mentions = current_user.relevant_mentions
   end
 
   def show

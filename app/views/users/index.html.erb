@@ -27,5 +27,14 @@
                  collection: @relevant_opinions,
                  as: :opinion %>
     </div>
+
+    <div class="new-ratings main-container">
+      <div class="new-ratings-count text-uppercase">
+        Your last <%= @relevant_mentions.count %> mentions
+      </div>
+      <%= render partial: 'users/main_rating',
+                 collection: @relevant_mentions,
+                 as: :opinion %>
+    </div>
   </section>
 </main>
