@@ -4,6 +4,7 @@ Rails.application.routes.draw do
   root to: 'users#index'
   resources :users, only: [:index, :show]
   resources :opinions, only: [:create]
+  resources :followings, only: [:create]
 
   devise_scope :user do
     get 'log_in', to: 'devise/sessions#new'
