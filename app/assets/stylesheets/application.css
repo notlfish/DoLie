@@ -154,3 +154,21 @@ body {
 .alert {
   background-color: #f6cfc6;
 }
+
+.devise-title {
+  text-align: center;
+}
+
+.devise-top-navbar {
+  margin-left: 0 !important;
+}
+
+.devise-form {
+  padding-top: 20px;
+  margin: auto;
+  max-width: 185px;
+}
+
+.devise-field {
+  max-width: 185px;
+}
