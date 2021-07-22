@@ -3,6 +3,7 @@ class OpinionsController < ApplicationController
     opinion = current_user.opinions.build(opinion_params)
 
     if opinion.save
+      Mention.create_from_opinion(opinion)
       redirect_to root_path
     else
       render :back, alert: 'Couldn\'t save your rating :('

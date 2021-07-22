@@ -24,6 +24,6 @@ module ApplicationHelper
   private
 
   def separate_mentions(str)
-    str.split(/(\@\w+)/)
+    str.split(/(@\w+)/)
   end
 end

@@ -11,9 +11,7 @@ class Mention < ApplicationRecord
     end
   end
 
-  private
-
   def self.parse_mentions(str)
-    str.scan(/\@\w+/).map { |str| str[1..-1] }
+    str.scan(/@\w+/).map { |string| string[1..] }
   end
 end

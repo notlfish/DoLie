@@ -12,7 +12,7 @@ RSpec.describe User, type: :model do
   end
 
   def new_opinion(user)
-    user.opinions.create(text: 'Using a good pillow is the best!')
+    user.opinions.create(text: '@User0 Using a good pillow is the best!')
   end
 
   def user_number(user)
@@ -25,7 +25,8 @@ RSpec.describe User, type: :model do
       user.save
       users.map { |existing_user| user.followeds << existing_user }
       users << user
-      new_opinion(user)
+      opinion = new_opinion(user)
+      Mention.create_from_opinion(opinion)
     end
   end
 
@@ -47,10 +48,25 @@ RSpec.describe User, type: :model do
       expect(followeds).to eq(%w[0 1 2 3])
     end
 
+    it 'retrieves all mentions' do
+      user = User.find_by(username: 'User0')
+      expect(user.mentions.count).to eq(6)
+    end
+  end
+
+  describe 'Instance methods' do
     it 'retrieves all the relevant opinions' do
       user = User.find_by(username: 'User4')
       opinions_from = user.relevant_opinions.pluck(:username)
       expect(opinions_from).to match_array(%w[User0 User1 User2 User3 User4])
+    end
+
+    it 'retrieves the relevant mention objects' do
+      user = User.find_by(username: 'User0')
+      mentioning_users = User.all.pluck(:username).to_a
+
+      expect(user.relevant_mentions(max: 10).pluck(:username).to_a)
+        .to match_array(mentioning_users)
     end
   end
 end
