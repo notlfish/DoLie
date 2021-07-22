@@ -11,5 +11,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @relevant_opinions = @user.relevant_opinions(from: :show, max: 20)
     @followers = @user.followers.limit(3)
+    @followeds_ids = current_user.followeds.pluck(:id) << current_user.id
   end
 end

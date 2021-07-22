@@ -1,5 +1,5 @@
 <nav class="left-navbar text-uppercase">
-  <%= render 'layouts/left_navigation_bar', user: @user, from: 'Profile' %>
+  <%= render 'layouts/left_navigation_bar', user: current_user, from: 'Profile' %>
 </nav>
 <nav class="top-navbar text-uppercase">
   <%= render 'layouts/top_navigation_bar', user: @user,
@@ -8,7 +8,7 @@
 
 <main>
   <aside class="user-summary right-aside">
-    <%= render 'user_summary', user: @user %>
+    <%= render 'user_summary', user: @user, followeds_ids: @followeds_ids %>
   </aside>
   <%= user_cover(@user) %>
   <div class="tabs-menu text-uppercase">

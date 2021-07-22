@@ -7,9 +7,7 @@
     </div>
   </div>
   <div>
-    <%= link_to followings_path(follower: current_user.id, followed: user.id),
-     method: 'post' do %>
-      <i class="fa fa-plus" aria-hidden="true"></i>
-    <% end %>
+    <%= follow_link(current_user.id, user.id, followeds_ids,
+                    css: 'follow-follower') %>
   </div>
 </div>

@@ -12,4 +12,13 @@ module UsersHelper
         link_to(follower.username, follower, class: 'user-link').html_safe
     end
   end
+
+  def follow_link(current_id, user_id, followeds_ids, css: '')
+    return if followeds_ids.include?(user_id)
+
+    link_to(followings_path(follower: current_id, followed: user_id),
+            method: 'post') do
+      content_tag(:div, fa_icon('plus'), class: css)
+    end
+  end
 end

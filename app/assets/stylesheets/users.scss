@@ -133,6 +133,7 @@ main {
 }
 
 .pic-and-name {
+  position: relative;
   padding-top: 25px;
   padding-bottom: 20px;
   text-align: center;
@@ -145,6 +146,18 @@ main {
   border-radius: 50%;
   margin: auto;
   padding-bottom: 20px;
+}
+
+.follow-user-link {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 58px;
+  left: 40px;
+  border: 1px solid #a8a8a8;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 40px;
 }
 
 .summary-stats {
@@ -188,4 +201,14 @@ main {
 .follower-text {
   font-size: 13px;
   padding-top: 10px;
+}
+
+.follow-follower {
+  width: 30px;
+  height: 30px;
+  margin-top: 12px;
+  border: 1px solid #a8a8a8;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
 }

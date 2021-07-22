@@ -1,5 +1,7 @@
 <div class="info-summary">
   <div class="pic-and-name">
+    <%= follow_link(current_user.id, user.id, followeds_ids,
+                    css: 'follow-user-link') %>
     <%= user_pic(user, image_class: 'summary-pic')%>
     <p class="black-text text-uppercase f-600"><%= user.full_name %></p>
     <p>@<%= user.username %></p>
@@ -25,5 +27,5 @@
     <h3 class="text-uppercase small-text">Followed by</h3>
   </div>
   <%= render partial: 'followed_by_entry', collection: @followers,
-             as: :user %>
+             as: :user, locals: { followeds_ids: followeds_ids } %>
 </div>

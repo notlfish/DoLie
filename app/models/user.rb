@@ -29,4 +29,8 @@ class User < ApplicationRecord
       .select('users.username as username, users.photo as photo, opinions.text')
       .where(author_id: ids).order(created_at: :desc).limit(max)
   end
+
+  def follows?(user)
+    (followeds.pluck(:id) << id).include?(user.id)
+  end
 end
