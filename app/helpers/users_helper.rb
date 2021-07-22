@@ -17,7 +17,7 @@ module UsersHelper
     return if followeds_ids.include?(user_id)
 
     link_to(followings_path(follower: current_id, followed: user_id),
-            method: 'post') do
+            method: 'post', class: 'follow-profile-user') do
       content_tag(:div, fa_icon('plus'), class: css)
     end
   end
