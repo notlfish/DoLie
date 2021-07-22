@@ -1,0 +1,14 @@
+<div class="right-aside-follow">
+  <div class="right-aside-entry">
+    <%= user_pic(user, image_class: 'round-thumbnail') %>
+    <div class="follower-text">
+      <p class="black-text"><%= user.full_name %></p>
+      <%= link_to "@#{user.username}", user %>
+    </div>
+  </div>
+  <div>
+    <%= link_to "/stub" do %>
+      <i class="fa fa-plus" aria-hidden="true"></i>
+    <% end %>
+  </div>
+</div>

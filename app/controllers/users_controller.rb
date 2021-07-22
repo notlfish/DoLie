@@ -10,5 +10,6 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @relevant_opinions = @user.relevant_opinions(from: :show, max: 20)
+    @followers = @user.followers.limit(3)
   end
 end

@@ -166,3 +166,26 @@ main {
   border-right: $content-border !important;
   border-left: $content-border !important;
 }
+
+.right-aside-follow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.followers-summary {
+  padding: 0 20px;
+}
+
+.followed-by-title {
+  display: flex;
+  align-items: center;
+  height: 65px;
+  margin-bottom: 10px;
+  border-bottom: $content-border;
+}
+
+.follower-text {
+  font-size: 13px;
+  padding-top: 10px;
+}

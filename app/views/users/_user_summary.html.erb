@@ -1,0 +1,29 @@
+<div class="info-summary">
+  <div class="pic-and-name">
+    <%= user_pic(user, image_class: 'summary-pic')%>
+    <p class="black-text text-uppercase f-600"><%= user.full_name %></p>
+    <p>@<%= user.username %></p>
+  </div>
+  <div class="summary-stats">
+    <div class="stats-entry">
+      <p class="black-text"><%= user.opinions.count %></p>
+      <p class="small-text">Ratings</p>
+    </div>
+    <div class="stats-entry middle-borders">
+      <p class="black-text"><%= user.followeds.count %></p>
+      <p class="small-text">Following</p>
+    </div>
+    <div class="stats-entry">
+      <p class="black-text"><%= user.followers.count %></p>
+      <p class="small-text">Followers</p>
+    </div>
+  </div>
+</div>
+
+<div class="followers-summary">
+  <div class="followed-by-title">
+    <h3 class="text-uppercase small-text">Followed by</h3>
+  </div>
+  <%= render partial: 'followed_by_entry', collection: @followers,
+             as: :user %>
+</div>
