@@ -1,49 +1,65 @@
 # DoLie
 
-Webapp for rating pillows and mattresses. Inspired by twitter.
-
-> This project was originally proposed by [Microverse](https://www.microverse.org/). Desing based on the one by [Gregoire Vella](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details).
+> MVP of a social media app for sharing mattresses, pillows and other comfy stuff ratings. It features users, short opinions, and mentions. Inspired by twitter.
 
 ## Built With
 
-- Ruby 3.0.2
-- Gems:
-  - Bundler
-  - RuboCop
-  - RSpec
-  - Rails
+- Ruby v3.0.2
+- Ruby on Rails v6.1.4
+
+
+## Screenshot
+![Home](assets/homepage-screenshot.png)
+![Profile](assets/profile-screenshot.png)
+
+#### [Live version]()
 
 ## Getting Started
 
-**To use the code in this project, you'll need to have Ruby, Rails and Postgresql installed and configured in your computer. You'll need a postgresql user with deployer permissions**
-
-To get a local copy up and running follow the following simple steps:
-
-On GitHub bash:
-
-  - To clone the project to your computer, run `https://github.com/notlfish/DoLie`
-  - To enter the project folder, run `cd DoLie`.
-  - To install the project dependencies, run `bundle install`
-  - To set up the database, run `bundle exec rails db:create && bundle exec rails db:migrate`
-  - To start the app, run `rails server`
-
-### Routes
-In this webapp you can access to the following routes:
-- http://localhost:3000/ to go to the log in page (assuming you haven't yet logged in).
-- Follow the links to sign up, if necessary.
-- Follow the links to navigate the webapp.
+To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-Ruby, and Bundler must be installed on your computer (versions 3.0.1 and 2.2.15, respectively). Postgresql must be installed, and correnctly configured.
+- Ruby v3.0.2
+- Ruby on Rails v6.1.4
+- Postgres: >=9.5
+
+### Setup
+
+Install gems with dependencies:
+
+```
+bundle install
+```
+
+Setup database with:
+
+**Configure postgress for the database to work**
+
+```
+   rails db:create
+   rails db:migrate
+```
+
+### Usage
+
+Start server with:
+
+```
+    rails server
+```
+
+Open `http://localhost:3000/` in your browser.
+Use the pages links to navigate the webapp.
 
 ### Run tests
-To run the tests, use the following commands
-- `bundle exec rspec` to run all the tests.
-- `bundle exec rspec spec/features` to run only the integration tests (this is time-consuming).
-- `bundle exec rspec spec/models` to run only the unit tests.
+Run test from the project root directory
+- `bundle exec rpsec` to run all the test
+- `bundle exec rspec spec/models` to run unit tests
+- `bundle exec rspec spec/features` to run integration tests.
 
-**To run the integration tests, you'll need a Google Chrome variant installed in your system.**
+**Chrome is needed to run the integration tests**
+
 
 ## Authors
 
@@ -53,11 +69,12 @@ To run the tests, use the following commands
 - Twitter: [@LucasFerrariSo1](https://twitter.com/LucasFerrariSo1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/lucas-mauricio-ferrari-soto-472a3515a/)
 
+
 ## 🤝 Contributing
 
-Contributions, issues, and feature requests are welcome!
+Contributions, issues and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/notlfish/ruby-bubble-sort/issues).
+Feel free to check the [issues page](issues/).
 
 ## Show your support
 
@@ -65,8 +82,8 @@ Give a ⭐️ if you like this project!
 
 ## Acknowledgments
 
-This project was originally proposed by [Microverse](https://www.microverse.org/). Desing based on the one by [Gregoire Vella](https://www.behance.net/gregoirevella).
+Project required by [Microverse](https://www.microverse.org/). Project's design by [Gregoire Vella](https://www.behance.net/gregoirevella) in [Benhance](https://www.behance.net/gallery/14286087/Twitter-Redesign-of-UI-details).
 
 ## 📝 License
 
-This project is [MIT](./LICENSE) licensed.
+[MIT](/LICENSE)
