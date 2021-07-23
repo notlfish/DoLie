@@ -12,7 +12,7 @@
 ![Home](assets/homepage-screenshot.png)
 ![Profile](assets/profile-screenshot.png)
 
-#### [Live version]()
+#### [Live version](https://fierce-river-41660.herokuapp.com/)
 
 ## Getting Started
 
