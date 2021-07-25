@@ -26,31 +26,20 @@ To get a local copy up and running follow these simple example steps.
 
 ### Setup
 
-Install gems with dependencies:
+Follow these steps to get a working copy in your local environment:
+**You will need Postgresql properly configured in your computer in order to get a local copy up and running. Instructions on how to configure Postgresql exceed these instructions.**
 
-```
-bundle install
-```
-
-Setup database with:
-
-**Configure postgress for the database to work**
-
-```
-   rails db:create
-   rails db:migrate
-```
+- In your terminal application, run `git clone https://github.com/notlfish/DoLie.git` to copy the project
+- Run `cd DoLie` to get into the project's root directory
+- Run `bundle intall` to install the project's dependencies:
+- Run `bundle exec rails db:create && bundle exec rails db:migrate` to set up the database. **You only do this once**
 
 ### Usage
 
-Start server with:
-
-```
-    rails server
-```
-
-Open `http://localhost:3000/` in your browser.
-Use the pages links to navigate the webapp.
+After you set up the project and the database:
+- Run `bundle exec rails server` to start the webapp.
+- Open `http://localhost:3000/` in your browser.
+- Use the pages links to navigate the webapp.
 
 ### Run tests
 Run test from the project root directory
