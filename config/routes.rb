@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show]
   resources :opinions, only: [:create]
   resources :followings, only: [:create]
+  delete "/followings" => "followings#destroy"
 
   devise_scope :user do
     get 'log_in', to: 'devise/sessions#new'
