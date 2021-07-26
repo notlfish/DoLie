@@ -15,7 +15,7 @@ module UsersHelper
 
   def follow_link(current_id, user_id, followeds_ids, css: '')
     if followeds_ids.include?(user_id)
-      return if css == 'follow-follower'
+      return if css == 'follow-follower' || current_id == user_id
 
       link_to({ controller: 'followings',
                 action: 'destroy',

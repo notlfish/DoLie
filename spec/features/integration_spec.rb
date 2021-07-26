@@ -89,6 +89,16 @@ RSpec.describe 'Feature tests' do
       comment_with_user
       expect(page).to have_content 'A good pillow a day keeps'
     end
+
+    it 'fails to register empty comment' do
+      comment_with_user(text: '')
+      expect(page).to have_content 'Text can\'t be blank'
+    end
+
+    it 'fails to register comment exceeding max comment length' do
+      comment_with_user(text: 'a' * 251)
+      expect(page).to have_content 'Text is too long (maximum is 250 characters)'
+    end
   end
 
   describe 'registers a mention', type: :feature do
