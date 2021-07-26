@@ -18,11 +18,16 @@ RSpec.describe User, type: :model do
   def user_number(user)
     user.username.delete_prefix('User')
   end
+
   before(:each) do
     users = []
     6.times do |n|
       user = new_user(n)
-      user.save
+      unless user.save
+        puts 'Couldn\'t save user'
+        p user
+        p user.errors.full_messages
+      end
       users.map { |existing_user| user.followeds << existing_user }
       users << user
       opinion = new_opinion(user)
