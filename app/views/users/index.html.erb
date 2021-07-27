@@ -1,9 +1,31 @@
-<nav class="left-navbar">
+<nav class="left-navbar text-uppercase">
   <%= render 'layouts/left_navigation_bar', user: current_user, from: 'Home' %>
 </nav>
-<nav class="top-navbar">
+<nav class="top-navbar text-uppercase">
   <%= render 'layouts/top_navigation_bar', user: current_user  %>
 </nav>
+
 <main>
-  <h1>Under construction</h1>
+  <aside class="who-to-follow right-aside">
+    <%= render 'who_to_follow' %>
+  </aside>
+
+  <div class="tabs-menu text-uppercase">
+    <p class="open-tab">Ratings</p>
+  </div>
+
+  <section id="opinions">
+    <div class="ratings main-container">
+      <%= render 'ratings_form', opinion: @opinion %>
+    </div>
+
+    <div class="new-ratings main-container">
+      <div class="new-ratings-count text-uppercase">
+        <%= @relevant_opinions.count %> new ratings
+      </div>
+      <%= render partial: 'users/main_rating',
+                 collection: @relevant_opinions,
+                 as: :opinion %>
+    </div>
+  </section>
 </main>

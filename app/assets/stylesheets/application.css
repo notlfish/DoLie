@@ -19,6 +19,10 @@ a {
   color: inherit;
 }
 
+body {
+  background-color: #f5f6f8;
+}
+
 p,
 body {
   margin: 0;
@@ -32,7 +36,6 @@ body {
   height: 100%;
   width: 250px;
   color: #657b92;
-  text-transform: uppercase;
   font-size: 14px;
 }
 
@@ -118,4 +121,8 @@ body {
 
 .top-navbar-settings {
   color: #386e9c;
+}
+
+.text-uppercase {
+  text-transform: uppercase;
 }

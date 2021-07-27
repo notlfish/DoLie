@@ -20,4 +20,13 @@ class User < ApplicationRecord
   has_many :followings_ed, class_name: 'Following',
                            foreign_key: 'followed_id', dependent: :destroy
   has_many :followers, through: :followings_ed, source: :follower
+
+  scope :who_to_follow, -> { all.order('id DESC').limit(3) }
+
+  def relevant_opinions
+    ids = followeds.pluck(:id) << id
+    Opinion.joins(:author)
+      .select('users.username as username, users.photo as photo, opinions.text')
+      .where(author_id: ids).order(created_at: :desc).limit(10)
+  end
 end

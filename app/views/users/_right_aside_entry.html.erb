@@ -1,0 +1,7 @@
+<div class="right-aside-entry">
+  <%= user_pic(user, image_class: 'round-thumbnail') %>
+  <div>
+    <%= link_to user.username, user, class: 'user-entry-name' %>
+    <%= first_follower(user) %>
+  </div>
+</div>
