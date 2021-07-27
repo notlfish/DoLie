@@ -1,0 +1,13 @@
+<div class="right-aside-follow">
+  <div class="right-aside-entry">
+    <%= user_pic(user, image_class: 'round-thumbnail') %>
+    <div class="follower-text">
+      <p class="black-text"><%= user.full_name %></p>
+      <%= link_to "@#{user.username}", user %>
+    </div>
+  </div>
+  <div>
+    <%= follow_link(current_user.id, user.id, followeds_ids,
+                    css: 'follow-follower') %>
+  </div>
+</div>

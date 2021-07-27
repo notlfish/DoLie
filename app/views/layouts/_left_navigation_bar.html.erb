@@ -1,7 +1,6 @@
 <div class="user-information">
   <div class="user-name">
     <%= user_pic(user, image_class: 'user-pic-thumbnail') %>
-    <!-- ><img src="<%= user.photo %>" class="user-pic-thumbnail">  -->
     <p class="navbar-username"><%= user.username %></p>
   </div>
   <div class="following-info">
@@ -28,6 +27,6 @@
   <li>
     <i class="fa fa-bed nav-icon" aria-hidden="true"></i>
     <%= link_to 'Call it a day!', destroy_user_session_path,
-     method: 'delete', class: 'nav-link'%>
+     method: 'delete', class: 'nav-link'  %>
   </li>
 </ul>
