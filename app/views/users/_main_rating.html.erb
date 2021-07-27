@@ -2,6 +2,6 @@
   <%= user_pic(opinion, image_class: 'user-pic-thumbnail no-left-padding')%>
   <div>
     <p class="user-entry-name"><%= opinion.username %></p>
-    <p class="small-text"><%= opinion.text %></p>
+    <p class="small-text"><%= render_opinion_text(opinion) %></p>
   </div>
 </div>
