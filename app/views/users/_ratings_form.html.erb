@@ -4,4 +4,7 @@
     <%= form.text_field :text, class: "input-field",
         placeholder: 'There\'s nothing to lie about' %>
   </div>
+  <div class="creation-errors">
+    <p> <%= locals[:error_messages] %></p>
+  </div>
 <%end%>

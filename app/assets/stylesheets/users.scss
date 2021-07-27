@@ -154,10 +154,15 @@ main {
   width: 40px;
   top: 58px;
   left: 40px;
-  border: 1px solid #a8a8a8;
   border-radius: 50%;
+  border: 1px solid #a8a8a8;
   text-align: center;
   line-height: 40px;
+}
+
+.unfollow-user-link {
+  border: 1px solid darksalmon !important;
+  color: darksalmon !important;
 }
 
 .summary-stats {
@@ -211,4 +216,9 @@ main {
   border-radius: 50%;
   line-height: 30px;
   text-align: center;
+}
+
+.opinion-text {
+  min-width: 40%;
+  overflow-wrap: break-word;
 }

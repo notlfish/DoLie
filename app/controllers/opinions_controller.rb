@@ -4,9 +4,11 @@ class OpinionsController < ApplicationController
 
     if opinion.save
       Mention.create_from_opinion(opinion)
-      redirect_to root_path
+      redirect_to(root_path)
     else
-      render :back, alert: 'Couldn\'t save your rating :('
+      redirect_back alert: 'Couldn\'t save your rating :(',
+                    fallback_location: root_path,
+                    flash: { error: opinion.errors.full_messages.join(', ') }
     end
   end
 

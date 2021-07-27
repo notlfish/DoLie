@@ -134,3 +134,49 @@ body {
 .text-uppercase {
   text-transform: uppercase;
 }
+
+.notice,
+.alert {
+  position: fixed;
+  bottom: 0;
+  height: 30px;
+  width: 100%;
+  color: dimgrey;
+  line-height: 30px;
+  text-align: center;
+  font-size: 14px;
+}
+
+.notice {
+  background-color: #d4f6c6;
+}
+
+.alert {
+  background-color: #f6cfc6;
+}
+
+.creation-errors {
+  color: darksalmon;
+  padding-left: 20px;
+  padding-top: 15px;
+  font-size: 13px;
+  text-transform: none;
+}
+
+.devise-title {
+  text-align: center;
+}
+
+.devise-top-navbar {
+  margin-left: 0 !important;
+}
+
+.devise-form {
+  padding-top: 20px;
+  margin: auto;
+  max-width: 185px;
+}
+
+.devise-field {
+  max-width: 185px;
+}

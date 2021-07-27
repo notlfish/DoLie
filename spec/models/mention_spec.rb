@@ -26,5 +26,15 @@ RSpec.describe Mention, type: :model do
 
       expect(fetched_mentioned_users).to match_array(mentioned_users)
     end
+
+    it 'Ignores invalid user names' do
+      user4 = User.find_by(username: 'user4')
+      opinion = user4.opinions.create(text: '@non_existing_user')
+      Mention.create_from_opinion(opinion)
+
+      fetched_mentions = Mention.where(opinion_id: opinion.id)
+
+      expect(fetched_mentions.empty?).to be(true)
+    end
   end
 end
