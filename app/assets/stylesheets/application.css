@@ -12,4 +12,110 @@
  *
  *= require_tree .
  *= require_self
+ *= require font-awesome
  */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p,
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+}
+
+.left-navbar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 250px;
+  color: #657b92;
+  text-transform: uppercase;
+  font-size: 14px;
+}
+
+.user-information {
+  background-color: #1b2a3d;
+}
+
+.user-name {
+  display: flex;
+  align-items: center;
+}
+
+.user-pic-thumbnail {
+  display: inline-block;
+  padding: 15px;
+  padding-right: 10px;
+  height: 50px;
+  width: 50px;
+}
+
+.following-info {
+  display: flex;
+}
+
+.following-box {
+  padding: 20px 0;
+  border: #16272f 1px solid;
+  text-transform: none;
+  text-align: center;
+  width: 100%;
+}
+
+.follow-count {
+  font-size: 18px;
+  color: #e6f3fc;
+}
+
+.navigation-links {
+  background-color: #213246;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.navigation-links > li {
+  font-size: 18px;
+  padding: 20px;
+}
+
+.nav-link {
+  font-size: 14px;
+}
+
+.navlink-highlight {
+  background-color: #4b9ad3;
+  color: white;
+}
+
+.nav-icon {
+  width: 18px;
+  text-align: center;
+  padding-right: 8px;
+}
+
+.top-navbar {
+  background-color: #52a7e7;
+  height: 80px;
+  margin-left: 250px;
+}
+
+.navigation-top-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+  font-size: 30px;
+  margin: 0;
+}
+
+.top-navbar-logo {
+  color: white;
+}
+
+.top-navbar-settings {
+  color: #386e9c;
+}

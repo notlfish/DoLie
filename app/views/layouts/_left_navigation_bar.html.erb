@@ -1,0 +1,32 @@
+<div class="user-information">
+  <div class="user-name">
+    <img src="<%= user.photo %>" class="user-pic-thumbnail">
+    <p class="navbar-username"><%= user.username %></p>
+  </div>
+  <div class="following-info">
+    <div class="following-box">
+      <p class="follow-count"><%= user.followeds.count %></p>
+      <p>Following</p>
+    </div>
+    <div class="following-box">
+      <p class="follow-count"><%= user.followers.count %></p>
+      <p>Followers</p>
+    </div>
+  </div>
+</div>
+
+<ul class="navigation-links">
+  <li <%= selected_page_highlight(from, 'Home') %>>
+    <i class="fa fa-home nav-icon" aria-hidden="true"></i>
+    <%= link_to 'Home', root_path, class: 'nav-link' %>
+  </li>
+  <li <%= selected_page_highlight(from, 'Profile') %>>
+    <i class="fa fa-user nav-icon" aria-hidden="true"></i>
+    <%= link_to 'Profile', user, class: 'nav-link' %>
+  </li>
+  <li>
+    <i class="fa fa-bed nav-icon" aria-hidden="true"></i>
+    <%= link_to 'Call it a day!', destroy_user_session_path,
+     method: 'delete', class: 'nav-link'%>
+  </li>
+</ul>
